@@ -7,11 +7,13 @@ class ProductSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'model', 'release_date', 'node']
 
 
-class NodeSerializer(serializers.ModelSerializer):
+class NodeSerializer(serializers.HyperlinkedModelSerializer):
 
-    supplier = serializers.PrimaryKeyRelatedField(
+    url = serializers.HyperlinkedIdentityField(view_name='node-detail')
+    supplier = serializers.HyperlinkedRelatedField(
+        allow_null=True,
+        view_name='node-detail',
         queryset=Node.objects.all(),
-        allow_null=True
     )
     products = ProductSerializer(many=True, read_only=True)
     level = serializers.IntegerField(read_only=True)
@@ -23,5 +25,5 @@ class NodeSerializer(serializers.ModelSerializer):
             'id',
             'name', 'email', 'country', 'city', 'street', 'house_number',
             'supplier', 'debt', 'level', 'created_at',
-            'products',
+            'products', 'url',
         ]

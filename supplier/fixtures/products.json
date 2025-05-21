@@ -1,0 +1,42 @@
+[
+  {
+    "model": "supplier.product",
+    "pk": 1,
+    "fields": {
+      "node": 1,
+      "name": "SuperPhone",
+      "model": "SP-1000",
+      "release_date": "2025-01-15"
+    }
+  },
+  {
+    "model": "supplier.product",
+    "pk": 2,
+    "fields": {
+      "node": 2,
+      "name": "MegaTablet",
+      "model": "MT-200",
+      "release_date": "2025-03-10"
+    }
+  },
+  {
+    "model": "supplier.product",
+    "pk": 3,
+    "fields": {
+      "node": 3,
+      "name": "GammaHeadset",
+      "model": "GH-50",
+      "release_date": "2025-04-05"
+    }
+  },
+  {
+    "model": "supplier.product",
+    "pk": 4,
+    "fields": {
+      "node": 4,
+      "name": "DeltaCamera",
+      "model": "DC-300",
+      "release_date": "2025-02-20"
+    }
+  }
+]
